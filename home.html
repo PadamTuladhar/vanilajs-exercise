@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="home.css">
+    <title>Paystub calculator</title>
+</head>
+
+<body>
+    <div style="display: flex;">
+        <div class="detailCategory">
+            <form id="hourForm">
+                <div class="inputLabel">Hours worked</div>
+                <div id="formfield">
+                    <input type="text" name="hours" id="hours-0" size="50">
+                </div>
+            </form>
+            <div class="controls">
+                <button class="add button" onclick="add()"><i class="fa fa-plus"></i>Add</button>
+            </div>
+        </div>
+        <div class="detailCategory">
+            <form id="rateForm">
+                <div class="inputLabel">Hourly rate</div>
+                <input type="text" name="hourly rate" id="hourly-rate" size="50">
+                <div class="inputLabel">Tintin</div>
+                <input type="text" name="tintin" id="tintin" size="50">
+                <div class="inputLabel">Combo</div>
+                <input type="text" name="combo" id="combo" size="50">
+                <div class="inputLabel">Eyelash</div>
+                <input type="text" name="eyelash" id="eyelash" size="50">
+                <div class="inputLabel">Heena</div>
+                <input type="text" name="heena" id="heena" size="50">
+            </form>
+        </div>
+        <div class="detailCategory">
+            <form id="tipsForm">
+                <div class="inputLabel">Tips</div>
+                <div id="tipsFormfield">
+                    <input type="text" name="tips" id="tips-0" size="50">
+                </div>
+            </form>
+            <div class="controls">
+                <button class="add button" onclick="addTips()"><i class="fa fa-plus"></i>Add</button>
+            </div>
+        </div>
+        <div class="detailCategory">
+            <div class="inputLabel">Do you want to include bonus and tips to calcualate your taxes?</div>
+            <form id="optionalSelectionForm">
+                <input type="radio" id="include" name="includeBonus" value="include">
+                <label for="include" class="optionalRadio">Yes</label><br>
+                <input type="radio" id="do-not-include" name="includeBonus" value="do-not-include">
+                <label for="do-not-include" class="optionalRadio">No</label><br><br><br>
+
+                <div class="inputLabel">Tax witholdings</div>
+                <div class="inputLabel">Federal tax</div>
+                <input type="text" name="federal tax" id="federal-tax" size="50">
+                <div class="inputLabel">State tax</div>
+                <input type="text" name="state tax" id="state-tax" size="50">
+                <div class="inputLabel">Medicare</div>
+                <input type="text" name="Medicare tax" id="medicare-tax" size="50">
+                <div class="inputLabel">Social security</div>
+                <input type="text" name="social security" id="social-security" size="50">
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <button class="calculate button" onclick='calculate()'>Calculate</button>
+        <button class="calculate button" onclick='clearForm()'>Clear</button>
+    </div>
+
+    <div style="margin-top:20px;" id="summary" class="hide">
+        <div style="display: flex;">
+            <div class="detailCategory">
+                <div class="inputLabel"><b>Summary</b></div>
+                <div class="inputLabel">Total hours worked: <span class="detailView"><span
+                            id="totalHoursWorked"></span></span></div>
+                <div class="inputLabel">Total hourly wage: <span class="detailView">$ <span
+                            id="totalHourlyWage"></span></span></div>
+                <div class="inputLabel">Total commission: <span class="detailView">$ <span
+                            id="totalCommission"></span></span></div>
+                <div class="inputLabel">Total tips: <span class="detailView">$ <span id="totalTips"></span></span></div>
+                <div class="inputLabel">Total wage: <span class="detailView">$ <span
+                            id="totalWageBeforeTax"></span></span></div>
+            </div>
+            <div class="detailCategory">
+                <div class="inputLabel"><b>Estimated tax calcualation</b></div>
+                <div class="inputLabel">Federal: <span class="detailView">$ <span id="federal"></span></span></div>
+                <div class="inputLabel">NC State: <span class="detailView">$ <span id="state"></span></span></div>
+                <div class="inputLabel">Social security: <span class="detailView">$ <span id="social"></span></span>
+                </div>
+                <div class="inputLabel">Medicare: <span class="detailView">$ <span id="medicare"></span></span></div>
+            </div>
+            <div class="detailCategory">
+                <div class="inputLabel"><b>Estimated net pay after tax</b></div>
+                <div class="inputLabel"><b>$ <span id="netPay"></span></b></div>
+                <div id="netCommissionView" class="hide">
+                    <div style="font-size:18px;"> Tips & commission total</div>
+                    <div class="inputLabel"><b>$ <span id="netCommission"></span> (in cash)</b></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

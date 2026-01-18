@@ -1,0 +1,60 @@
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    background: none;
+    width: 274px;
+    color: black;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.button {
+    border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 20px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.button:hover {
+    background: #2691d9;
+    color: #e9f4fb;
+    transition: 0.5s;
+}
+
+.inputLabel {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.optionalRadio {
+    font-size: 18px;
+}
+
+.detailView {
+    float: right;
+    font-weight: bold;
+}
+
+.detailCategory {
+    margin-right: 50px;
+    width: 25%;
+}
